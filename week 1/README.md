@@ -73,3 +73,4 @@ UNIX has a modular architecture with the following components:
 ### **User Information Commands**
 - `who` or `w`: List logged-in users.  
 - `whoami` or `who am i`: Display information about your session. 
+
