@@ -1,62 +1,75 @@
-# Introduction to UNIX
+# **Introduction to UNIX**
 
-## Operating Systems
-    - allocate resources and schedule tasks
-    - resources include CPU, memory, disk, tape, printers, terminals, modems, etc.
-    - only one user allowed at a time for each resource
-    - keeps track of filenames and directory structure
-    - multi-tasking (one task at a time per processor actually executing)
-    - multi-processing (schedules multiple processors)
-    - multi-user
+## **Operating Systems**
+Operating systems are responsible for managing hardware and software resources. Key features include:  
+- **Resource Allocation**: Handles CPU, memory, disk, printers, terminals, modems, etc.  
+- **Task Scheduling**: Allows multitasking (one task at a time per processor) and multiprocessing (manages multiple processors).  
+- **Multi-User Capability**: Enables multiple users to access resources simultaneously.  
+- **File Management**: Tracks filenames and directory structures.  
 
-## History of UNIX
-    - developed at Bell Labs (AT&T) in 1969
-    - unlike most OS's at the time, UNIX was multi-user, interactive, and simplified sharing of data & programs
-    - became popular in industry as college and university graduates were trained in it
-    - open system, ported to many different hardware platforms (unlike IBM, Burroughs, Univac mainframes)
-    - software written for one UNIX system will often run on other systems with little or no modification
-    - still very weak in areas of system management - tape management, security, hardware accounting, capacity planning tools, performance management including prioritization of jobs
-    - hardware manufacturers modified UNIX to run on their systems and added enhancements
-    - standardization was begun in response to Windows NT threat
-    - System V Release 4 is one of the steps to address standardization
-    - SVR4 includes many of the modifications that were being done by hardware manufacturers, if they were universally useful and applicable
+## **History of UNIX**
+- **Origins**: Developed at **Bell Labs (AT&T)** in 1969.  
+- **Innovations**: Introduced multi-user, interactive capabilities, and simplified sharing of data and programs.  
+- **Adoption**: Gained popularity in industry due to familiarity from academic training.  
+- **Open System**: Portable across hardware platforms, enabling software compatibility with little modification.  
+- **Limitations**: Early UNIX struggled with system management (e.g., tape management, security, performance prioritization).  
+- **Standardization**:  
+  - Began as a response to competition, particularly from Windows NT.  
+  - **System V Release 4 (SVR4)** incorporated universally useful modifications and aimed to unify UNIX variants.
 
-## History of Linux
-    - GNU (Gnu's not Unix) was started in early 80's to create and promote free software
-    - Linux was created by Linus Torvalds in the 1990's, released to the Internet in 1994, mostly using GNU C compiler
-    - about 1/3 of Linux is GNU code from the Free Software Foundation - a Linux distribution consists of Linux kernel + GNU compilers/tools/utilities + other free software
-    - Linux uses the Open Source model for development - code is placed on the Internet, users download and test it, programmers improve it and place it back on the web
-    - there is competition among programmers to fix bugs and improve Linux
+## **History of Linux**
+- **GNU Project**: Started in the early 1980s to create free software.  
+- **Linux Kernel**: Created by **Linus Torvalds** in the 1990s, released in 1994, built with GNU C Compiler.  
+- **Linux Distributions**: Comprise the Linux kernel, GNU tools, and additional software.  
+- **Open Source Model**:  
+  - Source code is made available online.  
+  - Users and developers collaborate to test, fix bugs, and enhance functionality.  
+  - Programmer competition drives rapid improvement.
 
-## UNIX Structure
-    - Hardware, surrounded by
-    - UNIX Kernel (basic OS), surrounded by
-    - Shell (user interface, command interpreter, and some built-in commands), surrounded by
-    - Utilities (or commands)
-    - most common shells: Bourne shell (sh), C shell (csh), Korn shell (ksh), Bourne again shell (bash), TC shell (tcsh), Z shell (zsh)
-    - we'll mostly be concerned with the Bash shell, which is the most popular Linux shell
-    - the Korn shell is the most popular Unix shell, and is very similar to the Bash shell
+## **UNIX Structure**
+UNIX has a modular architecture with the following components:  
+1. **Hardware**: Underlying physical layer.  
+2. **Kernel**: The core of the operating system, managing hardware resources.  
+3. **Shell**:  
+   - Provides a user interface and interprets commands.  
+   - Popular shells include:  
+     - **Bourne shell (sh)**  
+     - **C shell (csh)**  
+     - **Korn shell (ksh)**  
+     - **Bourne Again shell (bash)**  
+     - **TC shell (tcsh)**  
+     - **Z shell (zsh)**  
+   - The **Bash shell** is the most popular for Linux, while the **Korn shell** is widely used in traditional UNIX.  
+4. **Utilities**: External commands and programs that interact with the shell.  
 
-## Entering Commands, Logging In & Out
-    - to login, use an ssh (or similar) program, and provide userid and password
-    - to backspace (erase), usually backspace, control-h, or control-backspace
-    - to interrupt a process, usually control-c
-    - to logout, use exit, logout, or control-d
-    - command line arguments can be separated by one or more spaces or tabs
+## **Entering Commands, Logging In, and Logging Out**
+- **Login**: Use SSH or similar tools and provide your username and password.  
+- **Backspace**: Use the Backspace key, `Ctrl-H`, or `Ctrl-Backspace`.  
+- **Interrupt Process**: Use `Ctrl-C`.  
+- **Logout**: Use `exit`, `logout`, or `Ctrl-D`.  
+- **Command Line Arguments**: Separate arguments using spaces or tabs.  
 
 ---
 
-## Some Commands
-- **pwd** will show your current directory
-- **cd** is used to change current directory, eg. cd directory-name
-- **ls** - lists information about files and directories
-- **ls -a** - all files (including hidden)
-- **ls -l** - long form, gives more information about files
-- **ls -d** - gives information about the directory itself, not contained files
-- these options can be mixed and matched, eg. ls -ld
-- **cal** - displays a calendar of the current month
-- **cal 1995** - displays calendar for specified year
-- **cal 3 1995** - displays calendar for specified month of specified year
-- **date** - gives date and time
-- **who, w** - information about users logged on to system
-- **who am i, whoami** - information about your session
+## **Basic UNIX Commands**
+
+### **Navigation Commands**
+- `pwd`: Display the current directory.  
+- `cd <directory-name>`: Change the current directory.  
+
+### **File and Directory Listing**
+- `ls`: List files and directories.  
+- `ls -a`: Include hidden files in the listing.  
+- `ls -l`: Display detailed file information.  
+- `ls -d`: Display information about a directory, not its contents.  
+- Combine options, e.g., `ls -ld`.
+
+### **Date and Calendar Commands**
+- `cal`: Show the current month's calendar.  
+- `cal <year>`: Display the calendar for a specific year (e.g., `cal 1995`).  
+- `cal <month> <year>`: Show the calendar for a specific month and year (e.g., `cal 3 1995`).  
+- `date`: Display the current date and time.  
+
+### **User Information Commands**
+- `who` or `w`: List logged-in users.  
+- `whoami` or `who am i`: Display information about your session. 
