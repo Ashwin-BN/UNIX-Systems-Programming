@@ -1,0 +1,15 @@
+Lab Submission:
+
+1) Please submit the Source code (zip all .c, .h, and makeFiles). Also submit a MS word file which consist all output-screenshots and required explanations.
+
+2) Please submit a recorded-video which explains how you implement the lab and demonstrate how it works. This will give everyone the opportunity to present their solution. Please record a video (2~5 minutes) with the following contents:
+
+Introduce yourself (I would like to see your face in some part of the video, so I can recognize you later when we see each other at the campus :) )
+Show/demonstrate how your assignment works.
+Explain your code (walkthrough), how you design it ( a quick/detailed walk-through of the programming )
+Speak about challenges that you faced during this lab.
+Evaluate yourself. Have you implemented all requirements of the assignment? how do you evaluate yourself out of 10 for this assignment?
+NOTE: You can record the video (mp4 or mkv format) using some screen-capture software (like OBS : https://obsproject.com/ ). To submit the video:
+
+You can upload the video on the youtube (you may make it unlisted) and submit the link here.
+You can also directly upload the video to the BB.
